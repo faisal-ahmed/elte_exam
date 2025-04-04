@@ -59,19 +59,11 @@ int main()
         cout << "File reading error for input.";
     }
 
-    //Write output to a file
-    ofstream outputFile ("output.txt");
-    try {
-        if ( outputFile.is_open() ) {
-            outputFile << exerciseOneAnswer << endl;
-            outputFile << exerciseTwoAnswer << endl;
-            outputFile << exerciseThreeAnswer << endl;
-            outputFile << exerciseFourAnswer << endl;
-            outputFile.close();
-        } else throw(fileReadError);
-    } catch (bool error) {
-        cout << "File reading error for output.";
-    }
+    //Write output to standard output
+    cout << exerciseOneAnswer << endl;
+    cout << exerciseTwoAnswer << endl;
+    cout << exerciseThreeAnswer << endl;
+    cout << exerciseFourAnswer << endl;
 
     return 0;
 }
